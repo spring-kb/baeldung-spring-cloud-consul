@@ -1,0 +1,14 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: discovery-client-service
+  cloud:
+    #discovery:
+      #enabled: false
+    consul:
+      config:
+        enabled: false
+      discovery:
+        #enabled: false
+        register: false

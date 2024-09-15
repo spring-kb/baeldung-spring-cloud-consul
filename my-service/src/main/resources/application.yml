@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: my-service
+  config:
+    import:
+      - "optional:consul:"
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: true
+      discovery:
+        healthCheckPath: /my-health-check
+        healthCheckInterval: 20s
+        enabled: true
+        instanceId: ${spring.application.name}:${random.value}
